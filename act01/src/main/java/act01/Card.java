@@ -39,7 +39,10 @@ public class Card {
    *                  containing the point value of the card
    */
   public Card(String cardRank, String cardSuit, int cardPointValue) {
-    // Implemented in Activity 01
+      
+      cardRank = rank;
+      cardSuit = suit;
+      cardPointValue = pointValue;
   }
 
 
