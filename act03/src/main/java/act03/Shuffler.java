@@ -5,6 +5,7 @@
 
 package act03;
 
+
 /**
  * This class provides a convenient way to test shuffling methods.
  */
@@ -19,8 +20,12 @@ public class Shuffler {
    * @return the shuffled array
 	 */
 	public static int[] perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-	}
+            int n = values.length;
+            int[] shuffled = new int[n];
+            int k = 0;
+            int m;
+            
+  	}
 
 	/**
 	 * Apply an "efficient selection shuffle" to the argument.
