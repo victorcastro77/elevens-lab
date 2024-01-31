@@ -7,7 +7,7 @@ package act04;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Random;
 /**
  * The Deck class represents a shuffled deck of cards.
  * It provides several operations including
@@ -83,7 +83,8 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 04 *** */
+		int n = cards.size();
+                
 	}
 
 	/**
