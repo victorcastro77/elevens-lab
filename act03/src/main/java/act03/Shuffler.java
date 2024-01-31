@@ -24,8 +24,23 @@ public class Shuffler {
             int[] shuffled = new int[n];
             int k = 0;
             int m;
-            
+            if (n % 2 == 0) {
+                m = n /2;
+            } else { 
+                m = (n/2) -1;
+            }
+            for (int j = 0; j <= m; j++) {
+                values[j] += shuffled[k];
+                k += 2;
+            }
+            k = 1;
+            for (int j = m +1; j <= n-1; j++) {
+                values[j] += shuffled[k];
+                k += 2;
+            }
+            return shuffled;
   	}
+
 
 	/**
 	 * Apply an "efficient selection shuffle" to the argument.
@@ -40,6 +55,18 @@ public class Shuffler {
    * @return the shuffled array
 	 */
 	public static int[] selectionShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int n = values.length;
+                int[] shuffled = new int[n];
+                Random rand = new Random();
+                for (int k = 0; k < n - 1; k++) {
+                    int j;
+                    do {
+                        j = rand.nextInt(n-1);
+                    } while (values[j] == 0);
+                    values[j] += shuffled[k];
+                    values[j] = 0;
+                }
+                return shuffled;
 	}
+
 }
