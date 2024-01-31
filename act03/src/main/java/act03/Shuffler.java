@@ -5,6 +5,8 @@
 
 package act03;
 
+import java.util.Random;
+
 
 /**
  * This class provides a convenient way to test shuffling methods.
@@ -23,19 +25,15 @@ public class Shuffler {
             int n = values.length;
             int[] shuffled = new int[n];
             int k = 0;
-            int m;
-            if (n % 2 == 0) {
-                m = n /2;
-            } else { 
-                m = (n/2) -1;
-            }
+           int m = (n % 2 == 0) ? n / 2 - 1 : n / 2;
+
             for (int j = 0; j <= m; j++) {
-                values[j] += shuffled[k];
+                shuffled[k] = values[j];
                 k += 2;
             }
             k = 1;
-            for (int j = m +1; j <= n-1; j++) {
-                values[j] += shuffled[k];
+            for (int j = m + 1; j < n; j++) {
+                shuffled[k] = values[j];
                 k += 2;
             }
             return shuffled;
