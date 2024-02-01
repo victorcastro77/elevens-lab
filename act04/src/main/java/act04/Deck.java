@@ -84,6 +84,15 @@ public class Deck {
 	 */
 	public void shuffle() {
 		int n = cards.size();
+                Random rand = new Random();
+                for (int k = n - 1; k >= 1; k--) {
+                    int r = rand.nextInt(k+1);
+                    
+                    Card temp = cards.get(k);
+
+                    cards.set(k, cards.get(r));
+                    cards.set(r, temp);
+                }
                 
 	}
 
