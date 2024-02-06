@@ -12,6 +12,15 @@ public class Model implements MessageHandler {
 
   // Game state variables
   // TO BE COMPLETED IN ACTIVITY 07
+  private int gameStatus;
+  private Deck deck;
+  private Card[] board;
+  private boolean[] cardSelected;
+  private boolean validSelection;
+  private boolean gameWon;
+  private int gamesWon;
+  private int gamesPlayed;
+  
 
   /**
    * Model constructor: Create the data representation of the program
@@ -27,7 +36,11 @@ public class Model implements MessageHandler {
    * Initialize the model here and subscribe to any required messages
    */
   public void init() {
-    // TO BE COMPLETED IN ACTIVITY 07
+    Deck deck = deck;
+    Card[] board;
+    boolean[] cardSelected;
+    gamesWon = 0;
+    gamesPlayed = 0;
   }
   
  /**
