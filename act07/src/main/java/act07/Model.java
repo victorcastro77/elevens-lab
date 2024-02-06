@@ -36,7 +36,7 @@ public class Model implements MessageHandler {
    * Initialize the model here and subscribe to any required messages
    */
   public void init() {
-    Deck deck = deck;
+    Deck deck = new deck;
     Card[] board;
     boolean[] cardSelected;
     gamesWon = 0;
